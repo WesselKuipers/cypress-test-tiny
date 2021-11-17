@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 describe('page', () => {
-  it('works', () => {
-    cy.visit('https://example.cypress.io')
-  })
+  it('should display staging environment app', () => {
+    cy.visit('https://empty.appsemble.staging.appsemble.review');
+    cy.contains('Example Page A').should('exist');
+  });
 })
